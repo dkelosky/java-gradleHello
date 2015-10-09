@@ -1,21 +1,32 @@
+This example uses Gradle Wrapper.  One machine must initialize gradle and define the wrapper component in build.gradle.
+After this, checking in the appropriate gradle wrapper files, any other machine can clone the github repository and
+invoke gradlew (gradle wrapper).  On the first invocation, the neccessary files are downloade to build
+
+
+build project via
+=================
 ./gradlew build
-===============
-build .tar and .zip
 
+build .tar and .zip via:
+========================
 ./gradlew assemble
-===============
-build .tar and .zip
 
+
+build .tar and .zip via:
+========================
 ./gradlew run
-===============
-build .tar and .zip
 
 unzip buid/distributions
 =======================
-run /bin/gradleHello -> major / minor issues if differing versions of Java
+cd to repo.../build/distribution
+unzip
+cd /bin/gradleHello
+./gradleHello
 
-Install locally
-===============
+Note, major / minor issues if differing versions of Java (e.g. linux runs JDK 8, windows runs JDK 7)
+
+Install locally (instead of manual unzip) via:
+==============================================
 ./gradlew installDist
 
 Invoke installed:
@@ -23,3 +34,7 @@ Invoke installed:
 cd build/install/gradleHello/bin
 ./gradleHello
 
+
+Note:
+=====
+package name matters for naming convention followed in build.gradle mainClassName and is listed in there as packge.MainClass
