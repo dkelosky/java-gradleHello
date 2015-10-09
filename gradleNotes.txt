@@ -1,0 +1,25 @@
+./gradlew build
+===============
+build .tar and .zip
+
+./gradlew assemble
+===============
+build .tar and .zip
+
+./gradlew run
+===============
+build .tar and .zip
+
+unzip buid/distributions
+=======================
+run /bin/gradleHello -> major / minor issues if differing versions of Java
+
+Install locally
+===============
+./gradlew installDist
+
+Invoke installed:
+=================
+cd build/install/gradleHello/bin
+./gradleHello
+
